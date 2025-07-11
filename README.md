@@ -1,60 +1,87 @@
-# 🚀 [Project Title] - Odoo Hackathon 2025
+# 🧠 HR Onboarding System – Intelligent Odoo App | Hackathon 2025
 
-> 📌 **Team:** [script squad]  
-> 👥 **Members:** table for content 
-> | member name  |     role              |
-  |--------------|-----------------------|
-  | Samir        | Frontend development  |
-  | Ritu         |     management        |
-  | Vishwa       |     superbase         |
-  | Mahek        |     backend           |
----
+> 🎯 **Team: Script Squad**
 
-## 🧩 Problem Statement
+ |   Member   | Role                 | Responsibility                                        |
+ | ---------- | -------------------- | ----------------------------------------------------- |
+ |   Samir    | Frontend Developer   | Designed QWeb UI, built responsive onboarding screens |
+ |   Ritu     | Management & QA      | Defined onboarding workflows, testing & documentation |
+ |   Vishwa   | Supabase Integration | File upload logic, API integration                    |
+ |   Mahek    | Backend Developer    | ORM models, business logic, automation engine         |
+ 
+> 👨‍💻 Built for the Future of Enterprise Automation
 
-Describe the real-world problem you are solving.
-
-> _Example:_ “HR onboarding is often inefficient, with delayed task assignments and no centralized progress tracking, leading to poor new-hire experiences and HR overload.”
+> 🛠️ Tech Stack: Odoo 16 · Python · PostgreSQL · Supabase · REST APIs
 
 ---
 
-## 🎯 Project Overview
+## 🔥 TL;DR (One-Line Pitch)
 
-Briefly introduce your solution and what it does.
-
-> _Example:_ “Our HR Onboarding System automates checklist generation, task assignments, document uploads, and onboarding progress tracking in Odoo.”
+`HR Onboarding System` is a plug-and-play Odoo module that automates employee onboarding with smart checklists, task delegation, document tracking, and cross-department coordination — reducing manual HR work and improving new hire experience.
 
 ---
 
-## 💡 Key Features
+## 🚩 Problem Statement
 
-- ✅ Feature 1 — what it does  
-- ✅ Feature 2 — what it solves  
-- ✅ Feature 3 — how it adds value  
-- ✅ Feature 4 — integration or automation  
+Most organizations struggle with manual and fragmented onboarding processes. HR needs to coordinate across multiple departments, manually assign tasks, and send email reminders. This leads to delays, compliance issues, and frustrated new hires.
 
 ---
 
-## ⚙️ Tech Stack
+## 💡 Our Solution
 
-| Layer        | Tools Used              |
-|--------------|--------------------------|
-| Framework    | Odoo 16 (Python, XML)    |
-| Backend      | Python, Odoo ORM         |
-| Frontend     | HTML, CSS, JS (QWeb)     |
-| Storage/API  | PostgreSQL, Supabase (optional) |
-
----
-
-## 🏗️ Architecture Diagram (Optional but powerful)
-
-_Add a simple image showing modules or process flow._
+We developed an **automated HR Onboarding System** in Odoo 16 that:
+- Automatically generates checklists based on role or department
+- Assigns tasks to IT, Admin, and HR teams
+- Tracks onboarding progress in real-time
+- Lets employees upload and verify documents
+- Sends automated email + in-app alerts
 
 ---
 
-## 📦 Installation Guide
+## ✨ Core Features
 
-```bash
-git clone https://github.com/your-team/project-name.git
-cp -r your_module /path-to-odoo/custom-addons/
-# Restart Odoo and install module via Apps menu
+| Feature                     | Description                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------|
+| 🧾 Checklist Templates       | Create reusable onboarding task flows per role                             |
+| 🏢 Department Task Routing   | Auto-assign tasks to HR, IT, Admin                                          |
+| 📥 Document Upload/Verify   | Employees upload docs; Admin approves                                       |
+| 📊 Progress Dashboard       | Visual tracker for onboarding status                                        |
+| 📬 Smart Notifications      | Alerts via email + in-app for due/overdue tasks                            |
+| 🌐 Web Portal Access        | Employee self-service access (optional)                                     |
+
+---
+
+## 🧱 Module Architecture
+
+```plaintext
+        ┌────────────────────┐
+        │  New Employee Added│
+        └─────────┬──────────┘
+                  ↓
+      ┌────────────────────────────┐
+      │ Checklist Auto-Generated   │◄────────────┐
+      │ Based on Role/Department   │             │
+      └─────────┬──────────────────┘             │
+                ↓                                │
+  ┌────────────────────────────┐                 │
+  │ Tasks Assigned Automatically│                │
+  │ to IT / Admin / HR Teams   │                 │
+  └─────────┬──────────────────┘                 │
+            ↓                                    │
+ ┌──────────────────────────────┐                │
+ │ Employees Upload Documents   │                │
+ │ via Portal or Backend Access │                │
+ └─────────┬────────────────────┘                │
+           ↓                                     │
+ ┌─────────────────────────────────────────────┐ 
+ │ Admin/HR Reviews & Verifies Submitted Docs  │
+ └─────────┬───────────────────────────────────┘
+           ↓
+  ┌─────────────────────────────┐
+  │ Dashboard Tracks Progress   │
+  │ (Visual + Status Alerts)    │
+  └─────────┬───────────────────┘
+            ↓
+    ┌────────────────────────┐
+    │ Onboarding Completed✅ │
+    └────────────────────────┘
